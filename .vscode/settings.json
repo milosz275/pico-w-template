@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "ETHARP",
+        "FSDATA",
+        "gpio",
+        "LWIPOPTS",
+        "MEMP",
+        "NETCONN",
+        "NETIF",
+        "QUEUELEN",
+        "Webserver"
+    ],
+    "files.associations": {
+        "template.h": "c"
+    }
+}
