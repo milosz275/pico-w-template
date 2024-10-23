@@ -1,8 +1,24 @@
 # Pico W Template
 
+[![CMake Build Workflow](https://github.com/milosz275/pico-w-template/actions/workflows/cmake.yml/badge.svg)](https://github.com/milosz275/pico-w-template/actions/workflows/cmake.yml)
+[![CodeQL with CMake Build](https://github.com/milosz275/pico-w-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/milosz275/pico-w-template/actions/workflows/codeql.yml)
+[![Doxygen Pages](https://github.com/milosz275/pico-w-template/actions/workflows/doxygen-pages.yml/badge.svg)](https://github.com/milosz275/pico-w-template/actions/workflows/doxygen-pages.yml)
+[![License](https://img.shields.io/github/license/milosz275/pico-w-template)](LICENSE)
+
+![logo](assets/logo.png)
+
 This is a template for a Pico W project. It includes a basic project structure and a simple example of a Pico W application in C using pico-sdk and pico-extras. Feel free to use it if CMake is is challenging for you or you just want to get started quickly.
 
 To use this template click "Use this template" and create a new repository or open the template in a codespaces [or use this template here](https://github.com/new?template_name=pico-w-template&template_owner=milosz275).
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Configuration](#configuration)
+  - [Building](#building)
+- [Acknowledgements](#acknowledgements)
+- [License](#license)
 
 ## Getting Started
 
@@ -43,7 +59,6 @@ set(WIFI_SSID "<YOUR_SSID>" CACHE INTERNAL "WiFi SSID")
 set(WIFI_PASSWORD "<YOUR_PASS>" CACHE INTERNAL "WiFi password")
 ```
 
-
 ### Building
 
 To build the project, run the following commands:
@@ -61,3 +76,7 @@ ninja
 - [Pico Extras](https://github.com/raspberrypi/pico-extras)
 - [Pico Template](https://github.com/modmuss50/pico-template)
 - [Pico W Webserver Example](https://github.com/krzmaz/pico-w-webserver-example)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/milosz275/pico-w-template/blob/main/LICENSE) file for details.

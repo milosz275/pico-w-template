@@ -48,11 +48,6 @@ jobs:
         git submodule update --init
         echo "FREERTOS_KERNEL_PATH=$(pwd)" >> $GITHUB_ENV
 
-    - name: Setup Pico Board
-      run: |
-        echo "Setting up Pico Board"
-        echo "PICO_BOARD=pico_w" >> $GITHUB_EN
-
     - name: Build Main Project
       run: |
         mkdir build
