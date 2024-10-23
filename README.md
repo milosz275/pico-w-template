@@ -52,7 +52,7 @@ git submodule update --init
 
 ### Configuration
 
-Please create a `cmake` directory with a `credentials.cmake` file inside it. The file should contain the following lines:
+Please create a `credentials.cmake` file inside `cmake` directory. The file should contain the following lines:
 
 ```cmake
 set(WIFI_SSID "<YOUR_SSID>" CACHE INTERNAL "WiFi SSID")
