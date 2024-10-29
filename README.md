@@ -11,6 +11,9 @@ This is a template for a Pico W project. It includes a basic project structure a
 
 To use this template click "Use this template" and create a new repository or open the template in a codespaces [or use this template here](https://github.com/new?template_name=pico-w-template&template_owner=milosz275).
 
+- [GitHub repository](https://github.com/milosz275/pico-w-template)
+- [Doxygen documentation](https://milosz275.github.io/pico-w-template/)
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
