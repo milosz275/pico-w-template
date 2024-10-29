@@ -48,6 +48,19 @@ jobs:
         git submodule update --init
         echo "FREERTOS_KERNEL_PATH=$(pwd)" >> $GITHUB_ENV
 
+    - name: Create wifi_credentials.h
+      run: |
+        mkdir -p ./led_controller/
+        cat <<EOT >> ./led_controller/include/wifi_credentials.h
+        #ifndef _WIFI_CREDENTIALS_H
+        #define _WIFI_CREDENTIALS_H
+
+        #define WIFI_SSID "wifi_ssid"
+        #define WIFI_PASSWORD "wifi_password"
+
+        #endif
+        EOT
+
     - name: Build Main Project
       run: |
         mkdir build
