@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <pico/stdlib.h>
 #include <pico/cyw43_arch.h>
+#include <pico/multicore.h>
 #include <hardware/adc.h>
 
 #include "template.h"
@@ -25,6 +26,16 @@ float read_onboard_temperature(const char unit)
         return temp_c + 273.15f;
 
     return -1.0f;
+}
+
+void print_temperature()
+{
+    while (true)
+    {
+        float temperature = read_onboard_temperature(TEMPERATURE_UNITS);
+        printf("Onboard temperature = %.02f %c\n", temperature, TEMPERATURE_UNITS);
+        sleep_ms(1000);
+    }
 }
 
 int main()
@@ -61,14 +72,12 @@ int main()
     }
 
     // main loop
+    multicore_launch_core1(print_temperature);
     while (true)
     {
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
         sleep_ms(250);
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
         sleep_ms(250);
-
-        float temperature = read_onboard_temperature(TEMPERATURE_UNITS);
-        printf("Onboard temperature = %.02f %c\n", temperature, TEMPERATURE_UNITS);
     }
 }
