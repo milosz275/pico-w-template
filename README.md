@@ -3,7 +3,7 @@
 [![CMake Build Workflow](https://github.com/milosz275/pico-w-template/actions/workflows/cmake.yml/badge.svg)](https://github.com/milosz275/pico-w-template/actions/workflows/cmake.yml)
 [![CodeQL with CMake Build](https://github.com/milosz275/pico-w-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/milosz275/pico-w-template/actions/workflows/codeql.yml)
 [![Doxygen Pages](https://github.com/milosz275/pico-w-template/actions/workflows/doxygen-pages.yml/badge.svg)](https://github.com/milosz275/pico-w-template/actions/workflows/doxygen-pages.yml)
-[![License](https://img.shields.io/github/license/milosz275/pico-w-template)](LICENSE)
+[![License](https://img.shields.io/github/license/milosz275/pico-w-template)](/LICENSE)
 
 ![logo](assets/logo.png)
 
@@ -52,11 +52,16 @@ git submodule update --init
 
 ### Configuration
 
-Please create a `credentials.cmake` file inside `cmake` directory. The file should contain the following lines:
+Please create a `wifi_credentials.h` file inside `include` directory. The file should contain the following lines:
 
-```cmake
-set(WIFI_SSID "<YOUR_SSID>" CACHE INTERNAL "WiFi SSID")
-set(WIFI_PASSWORD "<YOUR_PASS>" CACHE INTERNAL "WiFi password")
+```c
+#ifndef _WIFI_CREDENTIALS_H
+#define _WIFI_CREDENTIALS_H
+
+#define WIFI_SSID "wifi_ssid"
+#define WIFI_PASSWORD "wifi_password"
+
+#endif
 ```
 
 ### Building
@@ -74,6 +79,7 @@ ninja
 
 - [Pico SDK](https://github.com/raspberrypi/pico-sdk)
 - [Pico Extras](https://github.com/raspberrypi/pico-extras)
+- [Pico Examples](https://github.com/raspberrypi/pico-examples)
 - [Pico Template](https://github.com/modmuss50/pico-template)
 - [Pico W Webserver Example](https://github.com/krzmaz/pico-w-webserver-example)
 
