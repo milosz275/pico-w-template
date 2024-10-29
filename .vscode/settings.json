@@ -1,14 +1,18 @@
 {
     "cSpell.words": [
         "codespaces",
+        "Doxygen",
         "ETHARP",
         "FSDATA",
         "gpio",
+        "ifndef",
         "LWIPOPTS",
         "MEMP",
         "NETCONN",
         "NETIF",
+        "POWERSAVE",
         "QUEUELEN",
+        "VREF",
         "Webserver"
     ],
     "files.associations": {
