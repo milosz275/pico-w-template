@@ -30,20 +30,20 @@ add_compile_options(
 )
 
 add_executable(PicoWTemplate
-src/main.c
+    src/main.c
 )
 
 target_link_libraries(PicoWTemplate
-pico_stdlib
-pico_cyw43_arch_lwip_threadsafe_background
-pico_lwip_http
-hardware_adc
+    pico_stdlib
+    pico_cyw43_arch_lwip_threadsafe_background
+    pico_lwip_http
+    hardware_adc
 )
 
 target_include_directories(PicoWTemplate PRIVATE
-${CMAKE_CURRENT_LIST_DIR}
-${CMAKE_CURRENT_LIST_DIR}/src
-${CMAKE_CURRENT_LIST_DIR}/include
+    ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}/src
+    ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
 pico_sdk_init()
