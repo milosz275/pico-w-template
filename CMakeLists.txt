@@ -42,7 +42,7 @@ target_include_directories(${PROGRAM_NAME} PRIVATE
 
 pico_sdk_init()
 
-pico_add_extra_outputs(${PROGRAM_NAME})
-
 pico_enable_stdio_usb(${PROGRAM_NAME} 1)
 pico_enable_stdio_uart(${PROGRAM_NAME} 0)
+
+pico_add_extra_outputs(${PROGRAM_NAME})
