@@ -1,3 +1,5 @@
+set(PROGRAM_NAME PicoWTemplate)
+
 cmake_minimum_required(VERSION 3.25)
 
 find_package(Perl)
@@ -11,15 +13,7 @@ include(cmake/utils.cmake)
 include(pico-sdk/pico_sdk_init.cmake)
 include(pico-extras/pico_sdk_import.cmake)
 
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/cmake/credentials.cmake)
-    include(cmake/credentials.cmake)
-else()
-    message(WARNING "Credentials file not found, using default values!")
-    set(WIFI_SSID "SSID" CACHE INTERNAL "WiFi SSID for examples")
-    set(WIFI_PASSWORD "password" CACHE INTERNAL "WiFi password for examples")
-endif()
-
-project(PicoWTemplate)
+project(${PROGRAM_NAME})
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
@@ -29,18 +23,18 @@ add_compile_options(
     -Werror
 )
 
-add_executable(PicoWTemplate
+add_executable(${PROGRAM_NAME}
     src/main.c
 )
 
-target_link_libraries(PicoWTemplate
+target_link_libraries(${PROGRAM_NAME}
     pico_stdlib
     pico_cyw43_arch_lwip_threadsafe_background
     pico_lwip_http
     hardware_adc
 )
 
-target_include_directories(PicoWTemplate PRIVATE
+target_include_directories(${PROGRAM_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
     ${CMAKE_CURRENT_LIST_DIR}/src
     ${CMAKE_CURRENT_LIST_DIR}/include
@@ -48,7 +42,7 @@ target_include_directories(PicoWTemplate PRIVATE
 
 pico_sdk_init()
 
-pico_add_extra_outputs(PicoWTemplate)
+pico_add_extra_outputs(${PROGRAM_NAME})
 
-pico_enable_stdio_usb(PicoWTemplate 1)
-pico_enable_stdio_uart(PicoWTemplate 0)
+pico_enable_stdio_usb(${PROGRAM_NAME} 1)
+pico_enable_stdio_uart(${PROGRAM_NAME} 0)
