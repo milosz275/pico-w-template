@@ -91,8 +91,7 @@ jobs:
       - if: matrix.build-mode == 'manual'
         name: Create wifi_credentials.h
         run: |
-          mkdir -p ./led_controller/
-          cat <<EOT >> ./led_controller/include/wifi_credentials.h
+          cat <<EOT >> ./include/wifi_credentials.h
           #ifndef _WIFI_CREDENTIALS_H
           #define _WIFI_CREDENTIALS_H
 
