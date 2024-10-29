@@ -55,7 +55,7 @@ dkms.conf
 build/
 
 # Wifi credentials
-cmake/credentials.cmake
+wifi_credentials.h
 
 # CMake
 CMakeFiles/
