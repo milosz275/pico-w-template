@@ -9,8 +9,6 @@
 
 This is a template for a Pico W project. It includes a basic project structure and a simple example of a Pico W application in C using pico-sdk and pico-extras. Feel free to use it if CMake is is challenging for you or you just want to get started quickly.
 
-To use this template click "Use this template" and create a new repository or open the template in a codespaces [or use this template here](https://github.com/new?template_name=pico-w-template&template_owner=milosz275).
-
 - [GitHub repository](https://github.com/milosz275/pico-w-template)
 - [Doxygen documentation](https://milosz275.github.io/pico-w-template/)
 
@@ -24,6 +22,19 @@ To use this template click "Use this template" and create a new repository or op
 - [License](#license)
 
 ## Getting Started
+
+To use this template click "Use this template" and create a new repository or open the template in a codespaces [or use this template here](https://github.com/new?template_name=pico-w-template&template_owner=milosz275).
+
+![use template screen](assets/use-template.png)
+
+After the repository is recreated, please modify repo settings in order to GitHub Pages docs deploy workflow succeed. Select GitHub Actions as a source for build and deployment.
+
+> [!IMPORTANT]
+> Even if your repository is private, deployed docs will be available publicly.
+
+![github pages](assets/pages-settings.png)
+
+CodeQL might not work for private repositories. If you want to use it, you need to enable it in the repository settings, else remove the workflow.
 
 ### Prerequisites
 
