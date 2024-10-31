@@ -89,6 +89,8 @@ cmake -G Ninja ..
 ninja
 ```
 
+This will produce `.uf2` file located in `build/src` directory. You can flash it to your Pico W device using the USB mass storage mode. [Instruction](https://youtu.be/d-karKb53og?si=i1do_1Gk_GdIMxir)
+
 ## Acknowledgements
 
 - [Pico SDK](https://github.com/raspberrypi/pico-sdk)
