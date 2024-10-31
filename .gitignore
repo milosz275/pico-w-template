@@ -65,3 +65,6 @@ CMakeTmp/
 
 # Doxygen
 Doxyfile.bak
+
+# Generated files
+external/
