@@ -53,8 +53,7 @@ git clone --recurse-submodules https://github.com/{your_username}/{your_repo}.gi
 If you have already cloned the repository without submodules you can initialize them using the following commands:
 
 ```bash
-git submodule init
-git submodule update
+git submodule update --init
 ```
 
 If any issues occur during the build, you may wanted to update the submodules inside `pico-sdk`:
