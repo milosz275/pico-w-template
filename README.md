@@ -47,7 +47,7 @@ sudo apt-get install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essen
 This project uses git submodules to include the Pico SDK and Pico Extras. To clone the repository with submodules use the following command:
 
 ```bash
-git clone --recurse-submodules https://github.com/milosz275/pico-w-template.git
+git clone --recurse-submodules https://github.com/{your_username}/{your_repo}.git
 ```
 
 If you have already cloned the repository without submodules you can initialize them using the following commands:
