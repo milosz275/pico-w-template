@@ -59,7 +59,7 @@ git submodule update --init
 If any issues occur during the build, you may wanted to update the submodules inside `pico-sdk`:
 
 ```bash
-cd pico-sdk
+cd lib/pico-sdk
 git submodule update --init
 ```
 
