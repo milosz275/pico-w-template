@@ -9,8 +9,8 @@ endif()
 set(PICO_BOARD "pico_w")
 include(cmake/utils.cmake)
 
-include(pico-sdk/pico_sdk_init.cmake)
-include(pico-extras/pico_sdk_import.cmake)
+include(lib/pico-sdk/pico_sdk_init.cmake)
+include(lib/pico-extras/pico_sdk_import.cmake)
 
 project(${PROGRAM_NAME} C CXX ASM)
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
