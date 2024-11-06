@@ -1,5 +1,3 @@
-
-
 add_executable(${PROGRAM_NAME}
     main.c
 )
