@@ -19,7 +19,9 @@ jobs:
     - name: Setup PICO SDK
       run: |
         echo "Setting up PICO SDK"
-        cd lib/pico-sdk
+        cd lib
+        git clone --recurse-submodules https://github.com/raspberrypi/pico-sdk.git
+        cd pico-sdk
         git submodule update --init
         echo "PICO_SDK_PATH=$(pwd)" >> $GITHUB_ENV
     
@@ -33,7 +35,9 @@ jobs:
     - name: Setup PICO Extras
       run: |
         echo "Setting up PICO Extras"
-        cd lib/pico-extras
+        cd lib
+        git clone --recurse-submodules https://github.com/raspberrypi/pico-extras.git
+        cd pico-extras
         git submodule update --init
         echo "PICO_EXTRAS_PATH=$(pwd)" >> $GITHUB_ENV
 
