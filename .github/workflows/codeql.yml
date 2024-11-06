@@ -54,41 +54,33 @@ jobs:
         name: Setup PICO SDK
         run: |
           echo "Setting up PICO SDK"
-          cd lib
-          git clone --recurse-submodules https://github.com/raspberrypi/pico-sdk.git
-          cd pico-sdk
+          cd lib/pico-sdk
           git submodule update --init
           echo "PICO_SDK_PATH=$(pwd)" >> $GITHUB_ENV
 
-      - if: matrix.build-mode == 'manual'
-        name: Setup PICO Examples
-        run: |
-          echo "Setting up PICO Examples"
-          cd lib
-          git clone --recurse-submodules https://github.com/raspberrypi/pico-extras.git
-          cd pico-extras
-          git submodule update --init
-          echo "PICO_EXAMPLES_PATH=$(pwd)" >> $GITHUB_ENV
+      # - if: matrix.build-mode == 'manual'
+      #   name: Setup PICO Examples
+      #   run: |
+      #     echo "Setting up PICO Examples"
+      #     cd lib/pico-examples
+      #     git submodule update --init
+      #     echo "PICO_EXAMPLES_PATH=$(pwd)" >> $GITHUB_ENV
 
       - if: matrix.build-mode == 'manual'
         name: Setup PICO Extras
         run: |
           echo "Setting up PICO Extras"
-          cd lib
-          git clone --recurse-submodules https://github.com/raspberrypi/pico-extras.git
-          cd pico-extras
+          cd lib/pico-extras
           git submodule update --init
           echo "PICO_EXTRAS_PATH=$(pwd)" >> $GITHUB_ENV
 
-      - if: matrix.build-mode == 'manual'
-        name: Setup FreeRTOS Kernel
-        run: |
-          echo "Setting up FreeRTOS Kernel"
-          cd lib
-          git clone --recurse-submodules https://github.com/FreeRTOS/FreeRTOS-Kernel.git
-          cd FreeRTOS-Kernel
-          git submodule update --init
-          echo "FREERTOS_KERNEL_PATH=$(pwd)" >> $GITHUB_ENV
+      # - if: matrix.build-mode == 'manual'
+      #   name: Setup FreeRTOS Kernel
+      #   run: |
+      #     echo "Setting up FreeRTOS Kernel"
+      #     cd lib/FreeRTOS-Kernel
+      #     git submodule update --init
+      #     echo "FREERTOS_KERNEL_PATH=$(pwd)" >> $GITHUB_ENV
 
       - if: matrix.build-mode == 'manual'
         name: Setup Pico Board
