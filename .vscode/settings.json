@@ -15,7 +15,8 @@
         "POWERSAVE",
         "QUEUELEN",
         "VREF",
-        "Webserver"
+        "Webserver",
+        "Werror"
     ],
     "files.associations": {
         "template.h": "c"
